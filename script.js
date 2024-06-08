@@ -1,6 +1,6 @@
 // script.js
 document.addEventListener('DOMContentLoaded', () => {
-    const firstImage = document.getElementById('first-image');
+    const firstImage = document.getElementById(dmsgk.jpg');
     const clickMessage = document.getElementById('click-message');
     const contentContainer = document.querySelector('.content-container');
     let secondImage;
@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
             clickMessage.style.display = 'none';
 
             secondImage = document.createElement('img');
-            secondImage.src = 'second-image-url.jpg'; // 2번째 이미지 URL로 변경
+            secondImage.src = 'second-image-url.jpg'; // B.png
             secondImage.alt = 'Second Image';
             secondImage.id = 'second-image';
             secondImage.style.position = 'absolute';
@@ -41,11 +41,11 @@ document.addEventListener('DOMContentLoaded', () => {
         let finalImageSrc;
 
         if (rand <= 60) {
-            finalImageSrc = 'second-image-url.jpg'; // 2번째 이미지 URL로 변경
+            finalImageSrc = 'second-image-url.jpg'; //B.png
         } else if (rand <= 95) {
-            finalImageSrc = 'third-image-url.jpg'; // 3번째 이미지 URL로 변경
+            finalImageSrc = 'third-image-url.jpg'; //A.png
         } else {
-            finalImageSrc = 'fourth-image-url.jpg'; // 4번째 이미지 URL로 변경
+            finalImageSrc = 'fourth-image-url.jpg'; //s.jpg
         }
 
         secondImage.src = finalImageSrc;
@@ -57,9 +57,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function displayResult(finalImageSrc) {
         const resultImage = document.createElement('img');
-        resultImage.src = finalImageSrc === 'second-image-url.jpg' ? 'result1-image-url.jpg' :
-                          finalImageSrc === 'third-image-url.jpg' ? 'result2-image-url.jpg' :
-                          'result3-image-url.jpg';
+        resultImage.src = finalImageSrc === 'second-image-url.jpg' ? 'BBB.jpg' :
+                          finalImageSrc === 'third-image-url.jpg' ? 'AAA.jpg' :
+                          'SSS.jpg';
         resultImage.alt = 'Result Image';
         resultImage.id = 'result-image';
         contentContainer.appendChild(resultImage);
